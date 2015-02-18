@@ -9,7 +9,7 @@ define([
 
       parse: function(obj){
 
-        LocalComments.fetch();
+        LocalComments.fetch({dataType: 'jsonp'});
         obj['localComments'] = LocalComments.getBy({'oid': obj['id']});
 
         var fields = ['comments', 'caption', 'id', 'images', 'likes', 'user', 'localComments'];

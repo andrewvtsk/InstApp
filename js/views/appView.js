@@ -47,7 +47,7 @@ define([
       },
 
       more: function(){
-        items.fetch();
+        items.fetch({dataType: 'jsonp'});
       },
 
       find: function(){
@@ -57,7 +57,7 @@ define([
 
       search: function(){
         if (!this.input.val()) return;
-        items.fetch();
+        items.fetch({dataType: 'jsonp'});
       },
 
       redirect: function(e){

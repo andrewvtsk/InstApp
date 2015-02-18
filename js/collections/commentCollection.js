@@ -19,11 +19,11 @@ define([
           comment.set(key, _.clone(comment[key]));
         };
         this.create(comment);
-        this.fetch();
+        this.fetch({dataType: 'jsonp'});
       },
 
       getBy: function(m){
-        this.fetch();
+        this.fetch({dataType: 'jsonp'});
         l = _.where(this.toJSON(), m);
         return l;
       }

@@ -20,7 +20,7 @@ define([
         this.model = new Detail(id);
         this.model['commentTmp'] = this.commentTmp;
         this.model.on('sync', this.render, this);
-        this.model.fetch();
+        this.model.fetch({dataType: 'jsonp'});
       },
 
       render: function(){

@@ -36,7 +36,6 @@ define([
       $.ajaxSetup({
         url: "https://api.instagram.com"
       });
-      //return app_router;
     };
 
     return {
