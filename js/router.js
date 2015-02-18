@@ -11,7 +11,7 @@ define([
         'photos': 'search',
         'photos/:tag': 'search',
         'photo/:id': 'detail',
-        '*actions': 'any'
+        '*actions': 'search'
       },
     });
 
@@ -20,16 +20,10 @@ define([
 
       app_router.on('route:search', function(tag){
         var appView = new AppView(tag);
-        //appView.render();
       });
 
       app_router.on('route:detail', function(id){
         var detailView = new DetailView(id);
-        //detailView.render();
-      });
-
-      app_router.on('route:any', function(){
-        console.log('any action');
       });
 
       Backbone.history.start();
