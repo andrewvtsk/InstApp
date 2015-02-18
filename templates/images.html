@@ -1,0 +1,55 @@
+<div class="row middleRow">
+
+  <div class="col-md-3 avatar">
+      <img class="img-circle pull-right avatar" src="<%= user.profile_picture %>">
+      <a class="pull-right" href="http://instagram.com/<%= user.username %>/">
+        <%= user.username %></a>
+  </div>
+
+  <div class="col-md-6 imagesRow" id="<%= id %>">
+    <div class="col-md-12" align="center">
+      <img src="<%= images.low_resolution.url %>" class="image">
+    </div>
+
+    <div class="col-md-12">
+      <span class="glyphicon glyphicon-heart" style="margin-left: 5px"></span>
+      <%= likes.count %>
+    </div>
+
+    <div class="col-md-12 commentsTitle">
+      <% if (caption) {%>
+        <%= commentTmp(caption) %>
+      <% } %>
+    </div>
+
+    <!--<div class="col-md-12">
+      <% c = comments.data.length %>
+      <% s = c > 3 ? c - 3 : 0 %>
+      <% if (c) {%>
+        <div class="col-md-12" style="margin-left: -15px;">
+          Last <%= c > 3 ? 3 : c %> Instagram comments:
+        </div>
+        <% for(i=s; i<c; i++){ %>
+          <%= commentTmp(comments.data[i]) %>
+      <% }}%>
+    </div> -->
+
+    <div class="col-md-12 localComments commentsTitle">
+      <% c = localComments.length %>
+
+      <% if (c) { %>
+        <div class="col-md-12 commentsTitle">
+          Last of <%= c  %> Local comments:
+        </div>
+        <% for (i=c-3; i<c; i++) { %>
+          <%= commentTmp(localComments[i]) %>
+        <% }} %>
+    </div>
+
+    <div class="col-md-12 sendcomment">
+      <input type="text" class="col-md-10 isend" placeholder="Type text and press Enter">
+    </div>
+
+  </div>
+
+</div>

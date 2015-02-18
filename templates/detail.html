@@ -1,0 +1,34 @@
+<div class="col-md-12 imageRow">
+  <div class="col-md-6" align="center">
+    <img src="<%= images.standard_resolution.url %>" class="image"  id="<%= id %>" width="400px" height="400px">
+  </div>
+
+  <div class="col-md-6">
+    <div class="col-md-12 caption">
+      <% if (caption) {%>
+          <%= commentTmp(caption) %>
+      <% } %>
+    </div>
+
+    <!-- <div class="col-md-12">
+      <% c = comments.data.length %>
+      <% if (c) { %>
+        <% for(i=0; i<c; i++){ %>
+          <%= commentTmp(comments.data[i]) %>
+      <% }} %>
+    </div> -->
+
+    <div class="col-md-12 scroll" id="localComments">
+      <% c = localComments.length %>
+      <% if (c) { %>
+        <% for (i=0; i<c; i++) { %>
+          <%= commentTmp(localComments[i]) %>
+        <% }} %>
+    </div>
+
+    <div class="col-md-12 sendcomment">
+      <input type="hidden" id="oid" value="<%= id %>">
+      <input type="text" class="col-md-10 dsend" placeholder="Type text and press Enter">
+    </div>
+
+</div>

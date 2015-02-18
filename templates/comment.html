@@ -1,0 +1,19 @@
+<div class="col-md-12 comment">
+  <div class="col-md-2 ava">
+    <% if(from && from.profile_picture) { %>
+      <img src="<%= from.profile_picture %>" class="ava">
+    <% } %>
+  </div>
+  <div class="col-md-10 commentItem">
+    <div class="commentItem">
+      <a href="#">
+        <% if(from && from.username) { %>
+          <%= from.username %>
+        <% } else { %>
+          Anonimus
+        <% } %>
+      </a>
+      <%= text %>
+    </div>
+  </div>
+</div>

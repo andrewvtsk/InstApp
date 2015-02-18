@@ -1,0 +1,82 @@
+body {
+  background-color: lightgrey;
+}
+
+header {
+  background-color: #517fa4;
+  color: #E6F5FA;
+}
+
+div.search {
+  margin-left: 110px;
+  margin-top: 30px;
+}
+
+div.more {
+  display: none;
+  margin: 20px -5px;
+}
+
+div.comment {
+  margin: 5px 0px 5px 0px;
+}
+
+div.caption {
+  margin: 5px 0px 5px -50px;
+}
+
+div.ava {
+  margin: 5px 0px 0px -5px;
+}
+
+img.ava {
+  width: 32px;
+  height: 32px;
+}
+
+div.commentItem {
+  margin-left: -10px;
+}
+
+div.middleRow {
+  padding: 25px 0px;
+}
+
+div.imagesRow{
+  padding: 20px;
+  background-color: white;
+  word-wrap: break-word;
+}
+
+div.imageRow{
+  margin-top: 50px;
+  padding: 20px;
+  background-color: white;
+  word-wrap: break-word;
+}
+
+img.avatar {
+  width: 50px;
+  height: 50px;
+}
+div.avatar {
+  padding: 20px;
+}
+
+a {
+  margin: 10px 5px 10px 0px;
+}
+
+div.commentsTitle {
+  margin-left: -15px;
+}
+
+div.sendcomment {
+  padding: 20px 0px 0px 15%;
+}
+
+div.scroll {
+  background-color: #f4f4f4;
+  height: 350px;
+  overflow: scroll;
+}
